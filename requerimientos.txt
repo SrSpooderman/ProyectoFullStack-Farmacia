@@ -1,0 +1,64 @@
+Pàgina: Login
+HTML: 
+Dos inputs, un per l’email i l’altre per a la contrasenya.
+Botó per send().
+
+CSS:
+Estil adequat.
+
+JS:
+Funció send(): 
+Servei de backend: servlet Login
+Mètode Get, els paràmetres email i pass s’envien al backend. 
+El pass correspon al Hash de la contrasenya. 
+A resposta del backend si es null el login no ha estat correcte. 
+En cas contrari s’obté un codi de sessió que s’ha d'emmagatzemar al sessionStorage amb clau session.
+Emmagatzemar email al sessionStorage amb clau mail.
+Un cop emmagatzamat la clau de sessió, s’avança a la pàgina Gestio.
+
+Pàgina: Gestio
+HTML: 
+Botó per Alta (avança a Alta)
+Botó per logOut()
+Taula de totes les altes relacionades amb el doctor
+
+CSS:
+Estil adequat.
+
+JS:
+Funció logOut():
+Esborrar mail i session del sessionStorage.
+Avança a Login 
+Funció getTable():
+Executada per l’event onload.
+Servei de backend: servlet ServXips
+Mètode Get, el paràmetre mail i session del sessionStorage s’envien al backend. 
+La resposta del Backend és un HTML, corresponent a la taula de Xips
+
+Pàgina: Alta
+HTML:
+Input text per introduir el id físic del xip
+Select amb la llista de tots els pacients.
+Select amb la llista de tots els medicaments.
+Input date per introduir la data límit per prende el medicament.
+Botó per enviar()
+Boto per avançar a Gestio
+
+CSS:
+Estil adequat.
+JS:
+Funció getPatients():
+Executada per l’event onload.
+Servei de backend: servlet ServPatients
+Mètode Get, el paràmetre mail i session del sessionStorage s’envien al backend. 
+La resposta del Backend és [CENSORED]
+Funció getMedicines():
+Executada per l’event onload.
+Servei de backend: servlet ServMedicines
+Mètode Get, el paràmetre mail i session del sessionStorage s’envien al backend. 
+La resposta del Backend és [CENSORED]
+Funció enviar():
+Servei de backend: servlet Release()
+Mètode POST, el paràmetre mail i session del sessionStorage, la idXip, el mailP del pacient, el idMed del medicament i la date limit s’envien al backend. 
+La resposta del Backend és un missatge amb el resultat de l’operació d’alta.
+

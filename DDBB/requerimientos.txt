@@ -1,0 +1,27 @@
+BBDD: “farmacia”
+usuari: “root”
+pass: “”
+
+Taula: doctor
+	-mail: primary key varchar(50).
+	-pass: codi hash de la pass varchar(100)
+	-name: varchar(100) nom complet del doctor
+	-last_log: date (yyyy-mm-dd)
+	-session: int(10)
+
+Taula: xip
+	-id: primary key int(10)
+	-doctor_mail: doctor.mail
+	-id_medicine: medicine.id
+	-id_patient: patient.mail
+	-date: date (yyyy-mm-dd). Data de finalització del ús del xip
+
+Taula: patient
+    -mail: primary key varchar(50)
+	-name: varchar (100) nom complet del pacient
+
+Taula: medicine
+	-id: primary key serial
+	-name: varchar(50)
+	-tmax: float (50) Temperatura máxima que soporta el medicament
+	-tmin: float (50) Temperatura mínima que soporta el medicament
