@@ -2,13 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>HTML</title>
+    <title>Alta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
 </head>
 
-<body>
+<body onload="getPatients(), getMedicines()">
+    <script type="text/javascript" src="js/Alta.js"></script>
 
+    <label for="id-xip">ID-XIP:</label>
+    <input type="text" id="id-xip"><br>
+
+    <label for="select-pacientes">Lista de ID de Pacientes:</label>
+    <select id="select-pacientes"></select><br>
+
+    <label for="select-medicamentos">Lista de ID de Medicamentos:</label>
+    <select id="select-medicamentos"></select><br>
+
+    <label for="fecha-limite">Fecha Límite:</label>
+    <input type="date" id="fecha-limite"><br>
+
+    <button id="enviar" onclick="enviar()">Enviar</button>
+
+    <button id="gestion" onclick="gotoGestion()">Gestión</button>
 
 
 </body>
