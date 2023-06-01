@@ -22,7 +22,7 @@ function getPatients(){
             for (let obj of respuesta){
                 let option = document.createElement("option");
                 option.value = obj.mail;
-                option.textContent = obj.name;
+                option.textContent = obj.name+"||"+obj.mail;
                 select_Patients.appendChild(option);
             }
         }

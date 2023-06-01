@@ -1,0 +1,14 @@
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Paracetamol', 37.5, 36.5);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Ibuprofeno', 38.0, 37.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Amoxicilina', 25.0, 15.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Loratadina', 30.0, 20.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Omeprazol', 40.0, 35.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Aspirina', 38.0, 37.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Dipirona', 39.0, 36.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Cetirizina', 30.0, 20.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Losartán', 25.0, 15.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Atorvastatina', 30.0, 25.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Metformina', 25.0, 15.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Levotiroxina', 30.0, 20.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Pantoprazol', 40.0, 35.0);
+INSERT INTO medicine (name, tmax, tmin) VALUES ('Warfarina', 25.0, 15.0);
