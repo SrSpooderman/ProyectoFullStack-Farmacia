@@ -2,16 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>HTML</title>
+    <title>Gestio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="CSS/Gestio.css">
 </head>
 
 <body onload="getTable()">
     <script type="text/javascript" src="js/Gestio.js"></script>
 
-    <button onclick="alta()">Alta</button>
-    <button onclick="logOut()">Logout</button>
+    <div id botones>
+        <button onclick="alta()" id="alta">Alta</button>
+        <button onclick="logOut()" id="logout">Logout</button>
+    </div>
 
     <div id="altas_xips">
 

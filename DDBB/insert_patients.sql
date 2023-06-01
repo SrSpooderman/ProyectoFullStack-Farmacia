@@ -1,0 +1,10 @@
+INSERT INTO patient (mail, name) VALUES ('john.doe@example.com', 'John Doe');
+INSERT INTO patient (mail, name) VALUES ('jane.smith@example.com', 'Jane Smith');
+INSERT INTO patient (mail, name) VALUES ('alexander.wilson@example.com', 'Alexander Wilson');
+INSERT INTO patient (mail, name) VALUES ('emily.johnson@example.com', 'Emily Johnson');
+INSERT INTO patient (mail, name) VALUES ('michael.brown@example.com', 'Michael Brown');
+INSERT INTO patient (mail, name) VALUES ('olivia.davis@example.com', 'Olivia Davis');
+INSERT INTO patient (mail, name) VALUES ('william.jones@example.com', 'William Jones');
+INSERT INTO patient (mail, name) VALUES ('sophia.anderson@example.com', 'Sophia Anderson');
+INSERT INTO patient (mail, name) VALUES ('ethan.jackson@example.com', 'Ethan Jackson');
+INSERT INTO patient (mail, name) VALUES ('ava.thompson@example.com', 'Ava Thompson');

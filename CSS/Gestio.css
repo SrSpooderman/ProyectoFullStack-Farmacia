@@ -1,0 +1,58 @@
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/007/771/574/non_2x/pink-round-tablets-pills-with-shadow-on-gradient-background-pharmaceutical-industry-pharmacy-products-vitamins-and-supplements-medication-use-in-hospital-or-drugstore-global-drug-retail-market-free-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#alta{
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#logout {
+    float: right;
+    padding: 5px 15px;
+    background-color: rgba(223, 10, 10, 0.526);
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#botones {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3vh;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}  
+th{
+    background-color: #333;
+    color: #fff;
+}
+tr:nth-child(odd) {
+    background-color: rgb(181, 232, 250);
+}
+
+
+tr:nth-child(even) {
+background-color: #7397ba;
+}

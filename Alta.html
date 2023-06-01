@@ -4,28 +4,28 @@
     <meta charset="utf-8">
     <title>Alta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="/CSS/Alta.css">
 </head>
 
 <body onload="getPatients(), getMedicines()">
     <script type="text/javascript" src="js/Alta.js"></script>
 
-    <label for="id-xip">ID-XIP:</label>
-    <input type="text" id="id-xip" maxlength="9"><br>
+    <div id="formulario">
+        <label for="id-xip">IDXip:</label>
+        <input type="text" id="id-xip" maxlength="9" pattern="[0-9]+" required placeholder="[0:9]"><br>
 
-    <label for="select-pacientes">Pacientes:</label>
-    <select id="select-pacientes"></select><br>
+        <label for="select-pacientes">Pacientes:</label>
+        <select id="select-pacientes"></select><br>
 
-    <label for="select-medicamentos">Medicamentos:</label>
-    <select id="select-medicamentos"></select><br>
+        <label for="select-medicamentos">Medicamentos:</label>
+        <select id="select-medicamentos"></select><br>
 
-    <label for="fecha-limite">Fecha Límite:</label>
-    <input type="date" id="fecha-limite"><br>
+        <label for="fecha-limite">Fecha Límite:</label>
+        <input type="date" id="fecha-limite" required><br>
+    </div>
+    
+    <button type="button" id="enviar" onclick="enviar()">Crear Xip</button>
 
-    <button id="enviar" onclick="enviar()">Enviar</button>
-
-    <button id="gestion" onclick="gotoGestion()">Gestión</button>
-
-
+    <button type="button" id="gestion" onclick="gotoGestion()">Ir Gestion</button>
 </body>
 </html>
