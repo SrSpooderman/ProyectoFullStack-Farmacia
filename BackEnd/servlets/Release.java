@@ -40,20 +40,27 @@ public class Release extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String mail = request.getParameter("mail");
 		String session = request.getParameter("session");
-		int idXip = Integer.parseInt(request.getParameter("idXip"));
+		String strIdXip = request.getParameter("idXip");
 		String mailP = request.getParameter("mailP");
 		int idMed = Integer.parseInt(request.getParameter("idMed"));
 		LocalDate date = LocalDate.parse(request.getParameter("date"));
 		String respuesta = "Error al crear xip";
-		
-		System.out.println("Ha llegao");
-		System.out.println(mail+" "+idXip+" "+mailP+" "+idMed+" "+date);
 		
 		Doctor doc = new Doctor();
 		doc.isLogged(mail, session);
 		doc.loadReleaseList();
 		
 		try {
+			int idXip = Integer.parseInt(strIdXip);
+			
+			//Comprobar si el xip ya existe
+			Xips xipe = new Xips();
+			xipe.load(Integer.parseInt(strIdXip));
+			
+			if (xipe != null || xipe.getId() != 0) {
+			    respuesta = "Xip ya existente";
+			}
+			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/farmacia", "root", "");
 			String sql_query = "INSERT INTO xip (id, doctor_mail, id_medicine, id_patient, date) VALUES ( ? , ? , ? , ? , ? );";
@@ -71,7 +78,11 @@ public class Release extends HttpServlet {
 			
 			respuesta = "Xip: "+xip.getId()+" Creado por: "+doc.getName()+" Con la medicina: "+xip.getMedicine().getName()+" Para el paciente: "+xip.getPatient().getName()+" Con la fecha de caducidad: "+xip.getDate()+" Ha sido creado con exito";
 		}catch (Exception ex) {
-			
+			try {
+				int idXip = Integer.parseInt(strIdXip);
+			} catch (Exception esx) {
+				respuesta = "Inserte valores numericos IDXip";
+			}
 		}
 		
 		response.setContentType("text/plain");

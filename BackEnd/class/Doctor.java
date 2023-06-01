@@ -23,7 +23,7 @@ public class Doctor extends Person{
 		this.session = session;
 	}
 	
-  public String getPass() {
+	public String getPass() {
         return pass;
     }
     
@@ -172,7 +172,7 @@ public class Doctor extends Person{
 					 "<th>Medicina</th>"+"\n"+
 					 "<th>Paciente</th>"+"\n"+
 					 "<th>Fecha</th>"+"\n"+
-					 "<tr>"+"\n";
+					 "</tr>"+"\n";
 		
 		LocalDate today = LocalDate.now();
 		for (Xips xip : this.releaseArray) {
@@ -182,7 +182,7 @@ public class Doctor extends Person{
                         "<td>" + xip.getMedicine().getName() + "</td>" + "\n" +
                         "<td>" + xip.getPatient().getName() + "</td>" + "\n" +
                         "<td>" + xip.getDate() + "</td>" + "\n" +
-                        "<tr>" + "\n";
+                        "</tr>" + "\n";
 			}
 			
 		}
